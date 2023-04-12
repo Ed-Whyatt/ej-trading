@@ -17,6 +17,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+        <!-- Static base css -->
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -34,7 +37,62 @@
     <title>EJ Trading {% block extra_title %}{% endblock %}</title>
 </head>
 <body>
-    <header class="container-fluid"></header>
+    <header class="container-fluid">
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Logo/Title</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo/Title</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Product One</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Basket</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Checkout</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        User
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                        <li><a class="dropdown-item" href="#">Log In</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Log Out</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Register</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
 
     {% if messages %}
         <div class="message-container"></div>
@@ -48,6 +106,8 @@
 
     {% block postloadjs %}
     {% endblock %}
+
+    <footer class="container-fluid"></footer>
 
 </body>
 </html>

@@ -1,0 +1,41 @@
+[{
+    "pk": 1,
+    "model": "products.products",
+    "fields": {
+      "name": "Test Product",
+      "full_name": "Test Product",
+      "brand": "Test Product",
+      "promotion_qr_code": "test product one",
+      "barcode": 9781509858637,
+      "price": 10.00,
+      "wholsale_price": 11.40,
+      "batch_no": 9781509858637,
+      "stock": 16,
+      "img_paths": "board.png",
+      "mark_up": 20,
+      "sale_price": 10.00,
+      "expiry": "2024-10-20",
+      "category": 1
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.products",
+    "fields": {
+        "name": "Test Product Two",
+        "full_name": "Test Product Two",
+        "brand": "Test Product",
+        "promotion_qr_code": 4.5,
+        "barcode": "7.6",
+        "price": 10.00,
+        "wholsale_price": 11.40,
+        "batch_no": 9781509858637,
+        "stock": 16,
+        "img_paths": "lamp.jpg",
+        "mark_up": 10,
+        "sale_price": 10.00,
+        "expiry": "2024-09-20",
+        "category": 2
+      }
+  }
+]
