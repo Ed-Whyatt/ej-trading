@@ -1,5 +1,14 @@
+.header-container {
+    margin-top: 100px;
+}
+
 .test-page {
     margin-top: 100px;
     height: 400px;
     width: 100%;
+}
+
+.products {
+    color: black;
+    background-color: blueviolet;
 }
